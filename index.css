@@ -1,6 +1,4 @@
-body{
-  background:#ccc;
-}
+
 .main {
   font-family:Arial;
   width:500px;
@@ -32,4 +30,80 @@ h3 {
 }
 .action a:hover{
   background:#000;
+}
+
+
+.slick-next {
+  display: none !important;
+}
+
+.slick-prev {
+  display: none !important;
+}
+
+
+
+
+
+.tab_links li {
+  font-family: 'Source Sans Pro', sans-serif;
+  cursor: pointer;
+  list-style: none;
+  float: left;
+  margin-right: 3px;
+  padding: 10px 40px;
+  background: #B326DA;
+  color: #ffffff;
+}
+
+.tab_links li:hover {
+  background: #D746FF;
+}
+
+.tab_box{
+  min-height: 200px;
+  width:335px;
+  margin: 10px 0 5px 40px;
+  border:1px dashed #B326DA;
+  padding:10px;
+  
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #B326DA;
+}
+
+
+
+.tab-group{
+  display: flex;
+  justify-content: center;
+}
+
+.tab{
+  flex-grow: 1;
+  padding: 5px;
+  list-style: none;
+  border:solid 1px #CCC;
+  text-align: center;
+  cursor: pointer;
+}
+
+.panel-group {
+  height: 100px;
+  border: solid 1px #CCC;
+  border-top: none;
+  background:#eee;
+}
+
+.panel{
+  display: none;
+}
+
+.tab.is-active{
+  background: #F00;
+  color: #FFF;
+  transition: all 0.2s ease-out;
+}
+
+.panel.is-show{
+  display: block;
 }
