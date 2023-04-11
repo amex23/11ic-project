@@ -1,20 +1,23 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
 .main {
   font-family:Arial;
   width:500px;
   display:block;
   margin:0 auto;
 }
-h3 {
-    background: #fff;
-    color: #3498db;
-    font-size: 36px;
-    line-height: 100px;
-    margin: 10px;
-    padding: 2%;
-    position: relative;
-    text-align: center;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', cursive;
+} 
+
+p, a {
+  font-family: 'Lato', sans-serif;
+
 }
+
 .action{
   display:block;
   margin:100px auto;
@@ -24,7 +27,7 @@ h3 {
 .action a {
   display:inline-block;
   padding:5px 10px; 
-  background:#f30;
+  background:#b0b4be;
   color:#fff;
   text-decoration:none;
 }
@@ -42,35 +45,33 @@ h3 {
 }
 
 
-
+.underline {
+  text-decoration: underline !important;
+}
 
 
 .tab_links li {
-  font-family: 'Source Sans Pro', sans-serif;
+
   cursor: pointer;
   list-style: none;
   float: left;
   margin-right: 3px;
   padding: 10px 40px;
-  background: #B326DA;
+  
   color: #ffffff;
 }
 
-.tab_links li:hover {
-  background: #D746FF;
-}
+
 
 .tab_box{
   min-height: 200px;
   width:335px;
   margin: 10px 0 5px 40px;
-  border:1px dashed #B326DA;
   padding:10px;
   
   font-family: 'Source Sans Pro', sans-serif;
-  color: #B326DA;
+ 
 }
-
 
 
 .tab-group{
@@ -82,16 +83,16 @@ h3 {
   flex-grow: 1;
   padding: 5px;
   list-style: none;
-  border:solid 1px #CCC;
+
   text-align: center;
   cursor: pointer;
+  color: #b0b4be;
 }
 
 .panel-group {
-  height: 100px;
-  border: solid 1px #CCC;
+ 
   border-top: none;
-  background:#eee;
+  
 }
 
 .panel{
@@ -99,11 +100,16 @@ h3 {
 }
 
 .tab.is-active{
-  background: #F00;
-  color: #FFF;
+  background: #b0b4be;
+  color: #414f6b;
   transition: all 0.2s ease-out;
 }
 
 .panel.is-show{
   display: block;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: #ffffff;
 }
