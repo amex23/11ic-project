@@ -1,4 +1,12 @@
-
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
@@ -10,11 +18,11 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Roboto', sans-serif;
 } 
 
 p, a {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
 }
 
@@ -110,6 +118,10 @@ p, a {
   width: 20%;
 }
 
+.slick-next {
+  right: 5px;
+}
+
 
 #modalOverlay {
   position: fixed;
@@ -127,7 +139,7 @@ p, a {
   top: 55%;
   left: 50%;
   text-align: center;
-  background-color: red;
+  /* background-color: red; */
   box-sizing: border-box;
   opacity: 0;
   transform: translate(-50%,-50%);  
@@ -138,10 +150,6 @@ p, a {
   opacity: 1;
   top: 50%;
 }
-
-
-
-
 
 
 #modalOverlaynew {
@@ -160,7 +168,7 @@ p, a {
   top: 55%;
   left: 50%;
   text-align: center;
-  background-color: green;
+ 
   box-sizing: border-box;
   opacity: 0;
   transform: translate(-50%,-50%);  
@@ -170,4 +178,326 @@ p, a {
 #modalOverlaynew.modal-opennew #modalnew {
   opacity: 1;
   top: 50%;
+}
+
+
+#modalOverlaytwo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index:9999;
+}
+
+#modaltwo {
+  position: fixed;
+  width: 100%;
+  top: 55%;
+  left: 50%;
+  text-align: center;
+ 
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translate(-50%,-50%);  
+  transition: all 300ms ease-in-out;
+}
+
+#modalOverlaytwo.modal-opentwo #modaltwo {
+  opacity: 1;
+  top: 50%;
+}
+
+
+#modalOverlaythree {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index:9999;
+}
+
+#modalthree {
+  position: fixed;
+  width: 100%;
+  top: 55%;
+  left: 50%;
+  text-align: center;
+ 
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translate(-50%,-50%);  
+  transition: all 300ms ease-in-out;
+}
+
+#modalOverlaythree.modal-openthree #modalthree {
+  opacity: 1;
+  top: 50%;
+}
+
+
+#modalOverlayfour {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index:9999;
+}
+
+#modalfour {
+  position: fixed;
+  width: 100%;
+  top: 55%;
+  left: 50%;
+  text-align: center;
+ 
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translate(-50%,-50%);  
+  transition: all 300ms ease-in-out;
+}
+
+#modalOverlayfour.modal-openfour #modalfour {
+  opacity: 1;
+  top: 50%;
+}
+
+
+
+
+div#nav { 
+  position: relative; 
+} div#nav a { padding: 5px 15px 5px; }
+
+
+ul.dropdown { 
+  display: none; 
+  position: absolute; 
+  top: 100%;
+  background: #777; 
+}
+
+ul.dropdown li { 
+  list-style-type: none; 
+}
+
+ul.dropdown li a { 
+  text-decoration: none; 
+  padding: 0em 1em; 
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+.modal {
+  position: absolute;
+  z-index: 10000; /* 1 */
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.modal.is-visible {
+  visibility: visible;
+}
+
+.modal-overlay {
+position: fixed;
+z-index: 10;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: hsla(0, 0%, 0%, 0.5);
+visibility: hidden;
+opacity: 0;
+transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
+
+.modal.is-visible .modal-overlay {
+opacity: 1;
+visibility: visible;
+transition-delay: 0s;
+}
+
+.modal-wrapper {
+position: absolute;
+z-index: 9999;
+top: 6em;
+left: 50%;
+width: 32em;
+margin-left: -16em;
+background-color: #fff;
+box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.35);
+}
+
+.modal-transition {
+transition: all 0.3s 0.12s;
+transform: translateY(-10%);
+opacity: 0;
+}
+
+.modal.is-visible .modal-transition {
+transform: translateY(0);
+opacity: 1;
+}
+
+.modal-header,
+.modal-content {
+padding: 1em;
+}
+
+.modal-header {
+position: relative;
+background-color: #fff;
+box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.06);
+border-bottom: 1px solid #e8e8e8;
+}
+
+.modal-close {
+position: absolute;
+top: 0;
+right: 0;
+padding: 1em;
+color: #aaa;
+background: none;
+border: 0;
+}
+
+.modal-close:hover {
+color: #777;
+}
+
+.modal-heading {
+font-size: 1.125em;
+margin: 0;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.modal-content > *:first-child {
+margin-top: 0;
+}
+
+.modal-content > *:last-child {
+margin-bottom: 0;
+}
+
+
+.slick-dots li button:before {
+  content: '' !important;
+  background-color: white !important; 
+  width: 22px;
+  height: 7px;
+  border-radius: 10px;
+}
+
+.slick-next:before {
+  display: none;
+}
+
+.slider .slick-arrow.slick-prev {
+
+  background: url("https://img.icons8.com/ios/50/000000/long-arrow-left.png") 0
+    0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-next {
+  background: url('./images/next.png') 0 0 / 100% no-repeat;
+}
+
+
+
+
+
+
+
+.marquee_text {
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 7rem;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+/* marquee */
+marquee { background: #0089fa; }
+
+.rightTI { background: #ff002b;
+  white-space: nowrap; 
+  overflow: hidden;
+  animation: marquee 18s linear infinite;
+}
+.rightTI:hover {
+  animation-play-state: paused;
+}
+@-webkit-keyframes marquee {
+  0% {text-indent: 100%;}
+  100% {text-indent: -100%;}
+}
+
+.rightCSS { 
+  background: #a35dc1;
+  overflow: hidden;
+} 
+.rightCSS div {
+  position: relative;
+  animation: CSSright linear 18s infinite;
+} 
+@keyframes CSSright {
+  0% { right: -100% }
+  100% { right: 100% }
+}
+.rightCSS:hover div {
+  animation-play-state: paused;
+}
+
+.rightJS { background: #ffa900; }
+
+/* .rightJQ { background: #00a753; } */
+
+.li {
+  float: left;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+	z-index: 1000;
+  top: 0;
+  width: 100%; 
+	background: rgba(34,34,34,0.25);
+	-webkit-transition: all ease-out .5s;
+  -moz-transition: all ease-out .5s;
+  -o-transition: all ease-out .5s;
+  transition: all ease-out .5s;
+}
+
+.active {
+  background-color: rgba(34,34,34,0.8);
+}
+
+@media only screen and (max-width: 600px) {
+    .slick-dots {
+      bottom: 15px;
+      left: 40%;
+      width: 50%;
+    }
 }

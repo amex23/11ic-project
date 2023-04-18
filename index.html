@@ -8,164 +8,533 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./index.css">
-  <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="./images/logo.png" />
 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
 
 </head>
 <body>
 
-	<section class="w-full flex flex-col items-center h-full relative gap-10">
-			<header class="flex flex-col w-full bg-[#211F1B] px-12 h-full " >
-				<div class="w-full bg-red-400 flex flex-col my-4 gap-4">
-					<div class="flex justify-center items-center bg-purple-400">
-						<div class="w-2/6"></div>
-						<div class="w-2/6 flex justify-center"><img class="flex self-center" src="./images/logo.png" alt=""></div>
-						<div class="w-2/6 flex justify-end">
-							<div class="flex  items-center justify-center gap-3">
-								<img class="cursor-pointer" src="./images/download.png" alt="">
-								<button type="button" id="open" class="py-1 px-4 rounded-2xl font-bold text-[#F3B867]" style="border: 1px solid #F3B867">Login</button>					
-
-								<button type="button" id="opennew" class="py-1 px-4 rounded-2xl font-bold bg-[#F3B867]" >Sign Up</button>
+	<section class="w-full flex flex-col items-center h-full relative gap-10 bg-[#171717]">
+			<header class="flex flex-col w-full bg-[#211F1B] px-3 md:px-12 pb-2 md:sticky top-0 z-50">
+				<div class="w-full flex flex-col my-4 gap-4  h-full">
+					<div class="flex justify-between md:justify-center items-center ">
+						<div class="hidden md:block w-2/6"></div>
+						<div class="w-[25%] md:w-2/6 flex justify-center"><img class="flex self-center" src="./images/logo.png" alt=""></div>
+						<div class="w-[75%] md:w-2/6 flex justify-end">
+							<div class="flex items-center justify-center gap-3">
 								
-								<img class="cursor-pointer" src="./images/INDIA.png" alt="">
-							</div> 
-						</div>
-					</div>
+								<div id="nav" class="hidden md:block">
+									<img class="cursor-pointer dropdown-toggle" src="./images/download.png" alt="">
+									<ul class="dropdown z-50 flex justify-center px-3 py-2 rounded-xl -ml-24 mt-6 ">
+										<li class=""><img src="./images/qr.png" alt=""></li>
+									</ul>
+								</div>
 
-					<div class="flex justify-center bg-green-400 gap-4">
-						<div><a href="" class="text-white">HOME</a></div>
-						<div><a href="" class="text-white">Sports</a></div>
-						<div><a href="" class="text-white">Live Casino</a></div>
-						<div><a href="" class="text-white">Rummy</a></div>
-						<div><a href="" class="text-white">Lottery</a></div>
-					</div>
-			 	</div>
-
-				<div id="modalOverlay" class="" style="display:none;">
-					<div id="modal" class="rounded-2xl max-w-2xl">
-							<div class="py-5">
-								<div class="flex items-center justify-center">
-									<div class="w-2/5">
-										<img src="https://media.giphy.com/media/cXblnKXr2BQOaYnTni/giphy.gif" width="540" height="400" class="rounded-2xl" />
-									</div>
-
-									<div class="w-3/5">
-										<h3>Content goes here</h3>
-										<button id="close" class="m-4 absolute top-0 right-1 hover:bg-gray-200 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-black" type="button">
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-												<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-											</svg>
-									</button>	
-									<div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 	dark:border-gray-700">
-										<div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-											<h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-												Sign in to your account
-											</h1>
-											<form class="space-y-4 md:space-y-6" action="#">
-												<div>
-													<label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-													<input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
-												</div>
-												<div>
-													<label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-													<input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
-												</div>
-												<div class="flex items-center justify-between">
-													<div class="flex items-start">
-														<div class="flex items-center h-5">
-														<input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+								<div>
+									<button type="button" id="open" class="py-1 px-2 md:px-4 rounded-2xl font-bold text-[#F3B867]" style="border: 1px solid #F3B867">Login</button>
+									<div id="modalOverlay" class="" style="display:none;">
+										<div id="modal" class="rounded-2xl max-w-2xl">
+												<div class="py-5">
+													<div class="flex justify-items-stretch bg-[#444544] rounded-xl">
+														<div class="w-2/5 ">
+															<img class="h-full" src="./images/ipl.png" />
 														</div>
-														<div class="ml-3 text-sm">
-														<label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
+														<div class="w-3/5">
+															<button id="close" class="m-4 absolute top-12 right-2 hover:bg-gray-200 text-[#797b79]" type="button">
+																<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+																	<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+																</svg>
+															</button>	
+														<div class="w-full bg-[#444544] pt-4 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+															<div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+																<form class="space-y-4 md:space-y-6 " action="#">
+																	<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																		<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																			<img src="./images/username.png" alt="">
+																		</span>																											
+																		<input type="search" name="q" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" autocomplete="off">
+																	</div>
+
+																	<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																		<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																			<img src="./images/password.png" alt="">
+																		</span>																						
+																		<input type="password" name="password" id="password" placeholder="Password" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+																	</div>
+																	
+																	<div class="relative flex justify-end items-center">
+																		<input type="search" name="q" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Verification Code" autocomplete="off">
+																		<div class="bg-white absolute right-2 rounded-lg px-3 py-1 font-bold italic text-lg">1234</div>
+																	</div>
+
+																	<div class="flex items-center justify-between">
+																		<div class="flex items-start">
+																			<div class="flex items-center h-5">
+																			<input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded-xl bg-[#414341] focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+																			</div>
+																			<div class="ml-3 text-sm">
+																			<label for="remember" class="text-[#797b79] ">Remember password</label>
+																			</div>
+																		</div>
+																		<a href="#" class="text-sm font-medium text-[#797b79]">Forgot password?</a>
+																	</div>
+																	<button type="submit" class="w-full bg-[#565855] py-2 text-[#797b79] rounded-lg">Sign in</button>
+																	<p class="text-sm font-light text-gray-500 dark:text-gray-400">
+																		Don’t have an account yet? <a href="#" class="font-medium text-[#F3B867]">Sign up</a>
+																	</p>
+																</form>
+															</div>
 														</div>
 													</div>
-													<a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
 												</div>
-												<button type="submit" class="w-full rounded-lg bg-gray-200">Sign in</button>
-												<p class="text-sm font-light text-gray-500 dark:text-gray-400">
-													Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
-												</p>
-											</form>
 										</div>
-									</div>
+									   </div>
+									</div>	
 								</div>
+								
+								<div>
+									<button type="button" id="opennew" class="py-1 px-2 md:px-4 text-black rounded-2xl font-bold bg-[#F3B867]" >Sign Up</button>
+									<div id="modalOverlaynew" class="" style="display:none;">
+										<div id="modalnew" class="rounded-2xl max-w-2xl">
+											<div class="py-5">
+												<div class="flex justify-items-stretch bg-[#444544] rounded-xl">
+													<div class="w-2/5">
+														<img src="./images/signupbanner.png"  class="h-full" />
+													</div>
+													<div class="flex items-center w-3/5 rounded-xl">
+														
+														<button id="closenew" class="m-4 absolute top-10 right-0 hover:bg-gray-200 text-[#797b79]" type="button">
+															<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+																<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+															</svg>
+														</button>	
+														<div class="w-full bg-[#444544] flex flex-col items-center rounded-xl">
+															<div class="w-full py-5 px-3">
+																<form class="space-y-4 md:space-y-6 " action="#">
+																	<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																		<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																			<img src="./images/username.png" alt="">
+																		</span>																											
+																		<input type="search" name="q" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" autocomplete="off">
+																	</div>
+
+																	<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																		<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																			<img src="./images/password.png" alt="">
+																		</span>																						
+																		<input type="password" name="password" id="password" placeholder="Password" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+																	</div>
+
+																	<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																		<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																			<img src="./images/password.png" alt="">
+																		</span>																						
+																		<input type="password" name="password" id="password" placeholder="Confirm Password" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+																	</div>
+
+																	<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																		<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																			<img src="./images/phone.png" alt="">
+																			<select class="bg-transparent text-[#b6b7b6] pl-1 text-xs" id="frm-whatever">									
+																				<option value="91">+91</option>
+																				<option value="92">+92</option>
+																				<option value="93">+93</option>
+																			</select>
+																		</span>																											
+																		<input type="search" name="q" class="bg-[#494a49] text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[74%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" autocomplete="off">
+																	</div>
+
+																	<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																		<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																			<img src="./images/verification.png" alt="">
+																		</span>																											
+																		<input type="search" name="q" class="bg-[#494a49] text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" autocomplete="off">
+
+																		<div class="bg-white absolute right-2 rounded-lg px-3 py-1 font-bold italic text-lg text-black">
+																			1234
+																		</div>
+																	</div>
+
+																	
+																	<div>
+																		<input type="search" name="q" class="bg-[#494a49] text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Verification Code" autocomplete="off">
+																	</div>
+
+																																																																	
+																	<button type="submit" class="w-full bg-[#F3B867] py-2 text-black rounded-lg font-bold">Sign up</button>
+																	<p class="text-sm font-light  text-[#797b79] dark:text-gray-400">
+																		Don’t have an account yet? <a href="#" class="font-medium text-[#F3B867]">Log in</a>
+																	</p>
+
+																</form>
+															</div>
+														</div>
+													</div>
+											</div>
+											</div>
+								   		</div>
+									</div>	
+								</div>
+
+								<div id="nav" class="flex items-center">
+									<img class="cursor-pointer dropdown-toggle" src="./images/INDIA.png" alt="">
+									<ul class="dropdown flex z-50 px-3 py-2 rounded-xl -ml-32 mt-6 w-[10rem]">
+										<li class="text-white flex gap-2 mb-3"><img src="./images/INDIA.png" alt=""> English</li>
+										<li class="text-white flex gap-2"><img src="./images/INDIA.png" alt="">Hindi</li>
+									</ul>
+								</div>
+
 							</div>
+						</div>
 					</div>
+			 	</div>
+				
+				<div class=" flex justify-center gap-4">
+					<div class="flex items-center gap-1"><img src="./images/icon-sports.png" alt="">  <a href="" class="text-white">Home</a></div>
+					<div class="flex items-center gap-1"><img src="./images/icon-sports.png" alt="">  <a href="" class="text-white">Sports</a></div>
+					<div class="flex items-center gap-1"><img src="./images/icon-sports.png" alt="">  <a href="" class="text-white">Live Casino</a></div>
+					<div class="flex items-center gap-1"><img src="./images/icon-sports.png" alt="">  <a href="" class="text-white">Rummy</a></div>
+					<div class="flex items-center gap-1"><img src="./images/icon-sports.png" alt="">  <a href="" class="text-white">Lottery</a></div>
+					<div class="flex items-center gap-1"><img src="./images/icon-sports.png" alt="">  <a href="" class="text-white">VIP</a></div>
+					<div class="flex items-center gap-1"><img src="./images/icon-sports.png" alt="">  <a href="" class="text-white">Promotions</a></div>
+					<div class="flex items-center gap-1"><img src="./images/icon-sports.png" alt="">  <a href="" class="text-white">Commision</a></div>
+					<div class="flex items-center gap-1"><img src="./images/icon-sports.png" alt="">  <a href="" class="text-white">Blog</a></div>
 				</div>
 
-				
-				
 			</header>
 
-			<div class="w-full h-full bg-pink-400 flex flex-col justify-center px-36 bg-purple-200">
-				<div id="sliderone" class="slider slider-nav w-full h-auto">
-					<div class="flex items-center justify-center bg-yellow-300 h-96 rounded-xl">
-						<img src="" alt="">
+			<main class="w-[80%] flex flex-col gap-5">
+				<div class="w-full h-full flex flex-col justify-center ">
+					<div id="sliderone" class="slider slider-nav w-full h-auto">
+						<div class="flex items-center justify-center bg-[#434343] h-[12rem] md:h-96 rounded-xl">
+							<img src="" alt="">
+						</div>
+						<div class="flex items-center justify-center bg-[#434343] h-[12rem] md:h-96 rounded-xl">
+							<img src="" alt="">
+						</div>
+						<div class="flex items-center justify-center bg-[#434343] h-[12rem] md:h-96 rounded-xl">
+							<img src="" alt="">
+						</div>
+						<div class="flex items-center justify-center bg-[#434343] h-[12rem] md:h-96 rounded-xl">
+							<img src="" alt="">
+						</div>
+						<div class="flex items-center justify-center bg-[#434343] h-[12rem] md:h-96 rounded-xl">
+							<img src="" alt="">
+						</div>
 					</div>
-					<div class="flex items-center justify-center bg-red-300 h-96 rounded-xl">
-						<img src="" alt="">
+	
+					<div class="bg-[#232323] -mt-3 rounded-xl flex items-center justify-between">
+						<div class="bg-white text-black rounded-l-xl px-3 py-2 font-bold">NOTICE</div>
+						<div class="text-white rightJQ w-full flex items-center"><div class="flex h-[20px] items-center">Virtual currency is a currency that does not have a physical form and only exists in digital form, also known as "digital currency"</div></div>
+						
 					</div>
-					<div class="flex items-center justify-center bg-blue-300 h-96 rounded-xl">
-						<img src="" alt="">
+				</div>
+	
+				<div class="w-full h-full gap-3 md:gap-2 flex flex-col md:flex-row justify-center h-full items-center ">
+					<div class="w-full md:w-2/3 h-[18rem] flex justify-between items-center px-0 md:px-5 rounded-xl bg-cover bg-center bg-[url('./images/bg.png')]">
+						<div class="flex flex-col gap-3 ">
+							<div class="gap-3 pl-4 md:pl-5 flex flex-col w-full">
+								<h3 class="font-bold text-white text-xl md:text-4xl">11ic Sports</h3>
+								<p class="text-white text-sm">11ic Sports offers excellent sports betting with diverse options and live in-play betting.</p>
+								<div>
+									<button id="opentwo" class="flex items-center self-start gap-2 bg-white text-black px-3 py-2 rounded-lg font-bold">
+										PLAY
+										<img src="./images/play.png" alt="">
+									</button>				
+									<div id="modalOverlaytwo" class="" style="display:none;">
+										<div id="modaltwo" class="rounded-2xl max-w-2xl">
+												<div class="py-5">
+													<div class="flex justify-items-stretch bg-[#444544] rounded-xl">
+														<div class="w-2/5 ">
+															<img class="h-full" src="./images/ipl.png" />
+														</div>
+														<div class="w-3/5">
+															<button id="closetwo" class="m-4 absolute top-12 right-2 hover:bg-gray-200 text-[#797b79]" type="button">
+																<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+																	<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+																</svg>
+															</button>	
+														<div class="w-full bg-[#444544] pt-4 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+															<div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+																<form class="space-y-4 md:space-y-6 " action="#">
+																	<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																		<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																			<img src="./images/username.png" alt="">
+																		</span>																											
+																		<input type="search" name="q" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" autocomplete="off">
+																	</div>
+
+																	<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																		<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																			<img src="./images/password.png" alt="">
+																		</span>																						
+																		<input type="password" name="password" id="password" placeholder="Password" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+																	</div>
+																	
+																	<div class="relative flex justify-end items-center">
+																		<input type="search" name="q" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Verification Code" autocomplete="off">
+																		<div class="bg-white absolute right-2 rounded-lg px-3 py-1 font-bold italic text-lg">1234</div>
+																	</div>
+
+																	<div class="flex items-center justify-between">
+																		<div class="flex items-start">
+																			<div class="flex items-center h-5">
+																			<input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded-xl bg-[#414341] focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+																			</div>
+																			<div class="ml-3 text-sm">
+																			<label for="remember" class="text-[#797b79] ">Remember password</label>
+																			</div>
+																		</div>
+																		<a href="#" class="text-sm font-medium text-[#797b79]">Forgot password?</a>
+																	</div>
+																	<button type="submit" class="w-full bg-[#565855] py-2 text-[#797b79] rounded-lg">Sign in</button>
+																	<p class="text-sm font-light text-gray-500 dark:text-gray-400">
+																		Don’t have an account yet? <a href="#" class="font-medium text-[#F3B867]">Sign up</a>
+																	</p>
+																</form>
+															</div>
+														</div>
+													</div>
+												</div>
+										</div>
+									   </div>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<img class="rounded-xl h-[14rem] md:h-full" src="./images/cricket.png" alt="">
 					</div>
-					<div class="flex items-center justify-center bg-gray-300 h-96 rounded-xl">
-						<img src="" alt="">
+					<div class="w-full md:w-1/3 flex gap-3 md:gap-2 flex-col h-full my-0 py-0 ">
+						<div class="h-1/2 bg-[#393c39] rounded-xl flex items-center justify-center">
+							<div class="flex flex-col pl-4 h-[8.65rem]">
+								<div class="w-full flex h-full">
+									<div class="w-[40%] bg-[#424541] h-full flex justify-center items-center">
+										<img src="./images/betfair.png"  alt="">
+									</div>							
+									<div class="w-[60%] flex justify-center">
+										<div class="self-center flex flex-col w-full justify-center items-start h-full rounded-r-xl px-3">
+											<h3 class="text-white text-lg">11ic Exchange</h3>
+											<p class="text-white">Best odds in free market for trading and betting.</p>
+										</div>
+										
+										<div id="openthree"class="self-end cursor-pointer bg-[#424541] h-full w-[14%] flex items-center justify-center rounded-r-xl">
+											<img src="./images/arrow-next.png" class="absolute" alt="">
+										</div>
+										<div id="modalOverlaythree" class="" style="display:none;">
+											<div id="modalthree" class="rounded-2xl max-w-2xl">
+													<div class="py-5">
+														<div class="flex justify-items-stretch bg-[#444544] rounded-xl">
+															<div class="w-2/5 ">
+																<img class="h-full" src="./images/ipl.png" />
+															</div>
+															<div class="w-3/5">
+																<button id="closethree" class="m-4 absolute top-12 right-2 hover:bg-gray-200 text-[#797b79]" type="button">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+																		<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+																	</svg>
+																</button>	
+															<div class="w-full bg-[#444544] pt-4 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+																<div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+																	<form class="space-y-4 md:space-y-6 " action="#">
+																		<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																			<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																				<img src="./images/username.png" alt="">
+																			</span>																											
+																			<input type="search" name="q" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" autocomplete="off">
+																		</div>
+	
+																		<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																			<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																				<img src="./images/password.png" alt="">
+																			</span>																						
+																			<input type="password" name="password" id="password" placeholder="Password" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+																		</div>
+																		
+																		<div class="relative flex justify-end items-center">
+																			<input type="search" name="q" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Verification Code" autocomplete="off">
+																			<div class="bg-white absolute right-2 rounded-lg px-3 py-1 font-bold italic text-lg">1234</div>
+																		</div>
+	
+																		<div class="flex items-center justify-between">
+																			<div class="flex items-start">
+																				<div class="flex items-center h-5">
+																				<input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded-xl bg-[#414341] focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+																				</div>
+																				<div class="ml-3 text-sm">
+																				<label for="remember" class="text-[#797b79] ">Remember password</label>
+																				</div>
+																			</div>
+																			<a href="#" class="text-sm font-medium text-[#797b79]">Forgot password?</a>
+																		</div>
+																		<button type="submit" class="w-full bg-[#565855] py-2 text-[#797b79] rounded-lg">Sign in</button>
+																		<p class="text-sm font-light text-gray-500 dark:text-gray-400">
+																			Don’t have an account yet? <a href="#" class="font-medium text-[#F3B867]">Sign up</a>
+																		</p>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+											</div>
+										   </div>
+										</div>	
+
+									</div>							
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="h-1/2 bg-[#393c39] rounded-xl flex items-center justify-center">
+							<div class="flex flex-col pl-4 h-[8.65rem]">
+								<div class="w-full flex h-full">
+									<div class="w-[40%] bg-[#424541] h-full flex justify-center items-center">
+										<img src="./images/evolution.png"  alt="">
+									</div>							
+									<div class="w-[60%] flex justify-center">
+										<div class="self-center flex flex-col w-full justify-center items-start h-full rounded-r-xl px-3">
+											<h3 class="text-white text-lg">11ic Exchange</h3>
+											<p class="text-white">Best odds in free market for trading and betting.</p>
+										</div>
+										<div id="openfour"class="self-end cursor-pointer bg-[#424541] h-full w-[14%] flex items-center justify-center rounded-r-xl">
+											<img src="./images/arrow-next.png" class="absolute" alt="">
+										</div>
+										<div id="modalOverlayfour" class="" style="display:none;">
+											<div id="modalfour" class="rounded-2xl max-w-2xl">
+													<div class="py-5">
+														<div class="flex justify-items-stretch bg-[#444544] rounded-xl">
+															<div class="w-2/5 ">
+																<img class="h-full" src="./images/ipl.png" />
+															</div>
+															<div class="w-3/5">
+																<button id="closefour" class="m-4 absolute top-12 right-2 hover:bg-gray-200 text-[#797b79]" type="button">
+																	<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+																		<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+																	</svg>
+																</button>	
+															<div class="w-full bg-[#444544] pt-4 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+																<div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+																	<form class="space-y-4 md:space-y-6 " action="#">
+																		<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																			<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																				<img src="./images/username.png" alt="">
+																			</span>																											
+																			<input type="search" name="q" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" autocomplete="off">
+																		</div>
+	
+																		<div class="relative flex justify-end text-gray-600 focus-within:text-gray-400 rounded-lg bg-[#494a49]">
+																			<span class="absolute inset-y-0 left-0 flex items-center pl-4">
+																				<img src="./images/password.png" alt="">
+																			</span>																						
+																			<input type="password" name="password" id="password" placeholder="Password" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-[87%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+																		</div>
+																		
+																		<div class="relative flex justify-end items-center">
+																			<input type="search" name="q" class="bg-[#494a49]  text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Verification Code" autocomplete="off">
+																			<div class="bg-white absolute right-2 rounded-lg px-3 py-1 font-bold italic text-lg">1234</div>
+																		</div>
+	
+																		<div class="flex items-center justify-between">
+																			<div class="flex items-start">
+																				<div class="flex items-center h-5">
+																				<input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded-xl bg-[#414341] focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+																				</div>
+																				<div class="ml-3 text-sm">
+																				<label for="remember" class="text-[#797b79] ">Remember password</label>
+																				</div>
+																			</div>
+																			<a href="#" class="text-sm font-medium text-[#797b79]">Forgot password?</a>
+																		</div>
+																		<button type="submit" class="w-full bg-[#565855] py-2 text-[#797b79] rounded-lg">Sign in</button>
+																		<p class="text-sm font-light text-gray-500 dark:text-gray-400">
+																			Don’t have an account yet? <a href="#" class="font-medium text-[#F3B867]">Sign up</a>
+																		</p>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+											</div>
+										   </div>
+										</div>
+
+									</div>							
+								</div>
+							</div>
+							
+						</div>
+						
 					</div>
-					<div class="flex items-center justify-center bg-purple-300 h-96 rounded-xl">
-						<img src="" alt="">
+				</div>
+	
+				<div class="flex flex-col gap-3 ">
+					<div class="w-full flex justify-between items-center">
+						<h3 class="text-white font-bold">LIVE CASINO</h3>
+						<button class="bg-white text-black font-bold rounded-xl py-1 px-2 flex gap-2 justify-center items-center">MORE<img src="./images/play.png" alt=""></button>
+					</div>
+					<div class="grid grid-cols-3 md:grid-cols-8 w-full gap-3">
+						<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Teen Patti@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Sic bo@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Dragon Tiger@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Three card poker@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Roulette@3x.png" alt="">
+						<img class="rounded-xl hidden md:block" src="./images/Black Jack@3x.png" alt="">
+						<img class="rounded-xl hidden md:block" src="./images/Niuniu@3x.png" alt="">
+					</div>
+					<div class="hidden md:grid grid-cols-3 grid-rows-1 md:grid-cols-8 w-full gap-3">
+						<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Teen Patti@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Sic bo@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Dragon Tiger@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Three card poker@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Roulette@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Black Jack@3x.png" alt="">
+						<img class="rounded-xl" src="./images/Niuniu@3x.png" alt="">
+					</div>
+				</div>
+	
+				<div class="flex flex-col md:flex-row  gap-3">
+					<div class="w-full md:w-1/2">
+						<img src="./images/jili.png" alt="">
+					</div>
+					<div class="w-full md:w-1/2">
+						<img src="./images/mpoker.png" alt="">
 					</div>
 				</div>
 
-				<div class="bg-gray-400 -mt-3 rounded-xl flex items-center justify-between">
-					<div class="bg-white text-black rounded-l-xl px-3 py-2">NOTICE</div>
-					<div class="text-white">Virtual currency is a currency that does not have a physical form and only exists in digital form, also known as "digital currency"</div>
-					<div class="text-white">Virtual currency  </div>
+				<div class="flex flex-col md:flex-row  gap-3">
+					<div class="w-full md:w-1/2">
+						<img src="./images/saba.png" alt="">
+					</div>
+					<div class="w-full md:w-1/2">
+						<img src="./images/lottery.png" alt="">
+					</div>
 				</div>
+			</main>
+
+			<div class=" fixed z-50 top-[65%] md:top-[70%] bg-[#444544] px-3 right-60 md:right-10 py-2 rounded-xl flex gap-3 flex-col">
+				<img src="./images/chat.svg" alt="">
+				<img class="hidden md:block"src="./images/service.svg" alt="">
 			</div>
 
-			<div class="w-full h-full gap-4 flex justify-center h-full items-center px-36 bg-gray-500">
-				<div class="w-2/3 bg-red-400 rounded-xl">
-					<img class="rounded-xl" src="./images/frame1.png" alt="">
-				</div>
-				<div class="w-1/3 flex gap-4 flex-col h-[17.3rem] bg-red-400 my-0 py-0 bg-yellow-300">
-					<div class="slider slider-navtwo h-1/2 bg-purple-300 rounded-xl flex items-center justify-center">
-						<div class="">11</div>
-						<div class="">22</div>
-					</div>
-
-					<div class="slider slider-navtwo h-1/2 bg-green-200 rounded-xl flex items-center justify-center">
-						<div class="">11</div>
-						<div class="">22</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="grid grid-cols-8 w-full px-36 gap-3">
-				<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
-				<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
-				<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
-				<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
-				<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
-				<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
-				<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
-				<img class="rounded-xl" src="./images/Baccarat@3x.png" alt="">
-			</div>
-
-			<footer class="flex justify-center items-center w-full px-20 py-10 bg-[#0A0A0A]">
-				<div class="w-full flex-col md:flex-col w-11/12 flex items-start gap-4 justify-center md:justify-between" >
-					<div class="flex gap-5">
+			<footer class="flex justify-center items-center w-full px-4 md:px-20 py-10 bg-[#0A0A0A]">
+				<div class="w-full flex-col md:flex-col md:w-11/12 flex items-start gap-7 md:gap-4 justify-center md:justify-between" >
+					<div class="flex gap-3 flex-wrap">
 						<a href="" class="text-white">About Us</a>
 						<a href="" class="text-white">Privacy Policy</a>
 						<a href="" class="text-white">Terms & Condition</a>
 						<a href="" class="text-white">FAQ</a>
 						<a href="" class="text-white">Affiliate</a>
 					</div>
-					<div class="flex items-center gap-3 bg-purple-400 w-full">
+					<div class="flex flex-col-reverse md:flex-row items-center gap-7 md:gap-3 w-full">
 						
-						<div class="w-3/5 flex flex-col items-start gap-2 bg-red-400">
+						<div class="w-full flex-wrap md:w-[58%] flex flex-col items-start gap-2 ">
 							<p class="text-white">SUPPORT PAYMENT</p>
-							<div class="flex gap-2">
+							<div class="flex flex-wrap gap-2">
 								<img src="./images/PhonePe.png" alt="">
 								<img src="./images/Bank Transfer.png" alt="">
 								<img src="./images/paytm.png" alt="">
@@ -177,10 +546,10 @@
 							</div>
 						</div>
 
-						<div class="w-2/5 flex justify-between bg-green-400 items-center ">
+						<div class="w-full flex-wrap md:w-[42%] flex justify-between  items-center ">
 							<div class="w-3/5 flex flex-col gap-2">
 								<p class="text-white">LICENSES</p>
-								<div class="flex gap-2">
+								<div class="flex flex-wrap gap-2">
 									<img src="./images/gc.png" alt="">
 									<img class="" src="./images/PAGCOR.png" alt="">
 									<img src="./images/18+.png" alt="">
@@ -189,7 +558,7 @@
 							</div>
 							<div class="w-2/5 flex flex-col gap-2">
 								  <p class="text-white">OUR APP</p>
-								  <div class="flex gap-2"> 
+								  <div class="flex flex-wrap gap-2"> 
 									<img src="./images/Google Play.png" alt="">
 								  	<img src="./images/App Store.png" alt="">
 								  </div>
@@ -200,6 +569,9 @@
 					<div class="flex items-center text-white">
 						COPYRIGHT © 2003-2023 11ic (International) Ltd.
 					</div>
+				</div>
+				<div>
+					
 				</div>
 			</footer>
 
@@ -236,6 +608,50 @@
 		});
 
 
+		$('#opentwo').click(function() {
+			$('#modalOverlaytwo').show().addClass('modal-opentwo');
+		});
+
+		$('#closetwo').click(function() {
+			var modaltwo = $('#modalOverlaytwo');
+			modaltwo.removeClass('modal-opentwo');
+			setTimeout(function() {
+				modaltwo.hide();
+			},200);
+		});
+
+
+		$('#openthree').click(function() {
+			$('#modalOverlaythree').show().addClass('modal-openthree');
+		});
+
+		$('#closethree').click(function() {
+			var modalthree = $('#modalOverlaythree');
+			modalthree.removeClass('modal-openthree');
+			setTimeout(function() {
+				modalthree.hide();
+			},200);
+		});
+
+
+
+		$('#openfour').click(function() {
+			$('#modalOverlayfour').show().addClass('modal-openfour');
+		});
+
+		$('#closefour').click(function() {
+			var modalfour = $('#modalOverlayfour');
+			modalfour.removeClass('modal-openfour');
+			setTimeout(function() {
+				modalfour.hide();
+			},200);
+		});
+
+		
+
+		
+
+
 		$('.slider-nav').slick({
 			infinite: true,
   			slidesToShow: 1,
@@ -266,6 +682,52 @@
 			$('.panel').eq(index).addClass('is-show');
 		});
 		});
+
+		$(function() { // Dropdown toggle
+			$('.dropdown-toggle').click(function() { $(this).next('.dropdown').slideToggle();
+		});
+
+		$(document).click(function(e) 
+			{ 
+				var target = e.target; 
+				if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle')) 
+				//{ $('.dropdown').hide(); }
+				{ $('.dropdown').slideUp(); }
+			});
+		});
+
+		$(function(){
+			var rightJQ = {
+				init: function(){
+				$('.rightJQ').css({
+					overflow: 'hidden'
+				});
+				
+				rightJQ.loop();
+				},
+				loop: function(){
+				$('.rightJQ div').css({
+					position: 'relative',
+					right: '-100%'
+				}).animate({
+					right: '100%'
+				}, 16000, 'linear', rightJQ.loop);
+				}
+			};
+			rightJQ.init();
+		});
+
+		$(function() {
+			$(window).on("scroll", function() {
+				if($(window).scrollTop() > 50) {
+					$(".header").addClass("active");
+				} else {
+					//remove the background property so it comes transparent again (defined in your css)
+				$(".header").removeClass("active");
+				}
+			});
+		});
+		
 	</script>
 
 </body>
